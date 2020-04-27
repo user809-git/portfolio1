@@ -1,0 +1,41 @@
+@charset="UTF-8"
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+ol, ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img, input, select {
+    border: none;
+    vertical-align: center;
+}
+div {
+    display: block;
+    box-sizing: border-box;
+}
+body {
+    font-family: "나눔스퀘어R", NanumSquareR;
+    font-size: 14px;
+}
+
+.row {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.cf:after, .cf:before {
+    content: '';
+    display: block;
+    clear: both;
+}

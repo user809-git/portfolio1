@@ -1,0 +1,22 @@
+@charset "UTF-8"
+
+.imgBox img {
+    width: 100%;
+    filter: blur(2px) brightness(80%);
+    transform: scale(1, 1) translateY(-12%);
+    transition: transform 1s 0s;
+}
+
+    /*hover*/
+section:hover .imgBox img {
+    filter: blur(0) brightness(100%);
+    transform: scale(1.1, 1.1) translateY(-12%);
+}
+
+
+
+
+
+
+
+
