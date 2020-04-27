@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>border line effect</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".line01, .line02, .line03, .line04").hide();
+            $(".wrapper").on({
+                mouseenter:function(){
+                    $(".line01").show().stop().animate({"width":"500px"}, 2000, function(){
+                        $(".line02").show().stop().animate({"height":"500px"}, 2000, function(){
+                            $(".line03").show().stop().animate({"width":"500px"}, 2000, function(){
+                                $(".line04").show().stop().animate({"height":"500px"}, 2000);
+                            });
+                        });
+                    });
+                },
+                mouseleave:function(){
+                    $(".line01").hide().stop().css({"width":"0px"});
+                    $(".line02").hide().stop().css({"height":"0px"});
+                    $(".line03").hide().stop().css({"width":"0px"});
+                    $(".line04").hide().stop().css({"height":"0px"});
+                }
+            });
+        });
+        
+//        $(document).ready(function(){
+//            $(".line01, .line02, .line03, .line04").hide();
+//            $(".wrapper").on({                
+//                mouseenter:function(){
+//                    var i = $(this).index();
+//                    
+//                    $(".line01").eq(i).show();
+//                    $(".line02").eq(i).show();
+//                    $(".line03").eq(i).show();
+//                    $(".line04").eq(i).show();
+//                },
+//                mouseleave:function(){
+//                    var i = $(this).index();
+//                    
+//                    $(".line01").eq(i).hide();
+//                    $(".line02").eq(i).hide();
+//                    $(".line03").eq(i).hide();
+//                    $(".line04").eq(i).hide();
+//                }
+//            });
+//        });
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /*   border line effect   */
+        .wrapper {
+            width: 500px;
+            height: 500px;
+            background: orange;
+            margin: 50px auto;
+            position: relative;
+        }
+        .line01 {
+            width: 0px; height: 10px; background: #000;
+            animation-name: line1;
+        }
+        .line02 {
+            width: 10px; height: 0; background: red;
+            position: absolute; right: 0px; top: 0;
+            animation-name: line2;
+            animation-delay: 2s;
+        }
+        .line03 {
+            width: 0px; height: 10px; background: green;
+            position: absolute; bottom: 0; right: 0;
+            animation-name: line3;
+            animation-delay: 4s;
+        }
+        .line04 {
+            width: 10px; height: 0; background: blue;
+            position: absolute; bottom: 0; left: 0;
+            animation-name: line4;
+            animation-delay: 6s;
+        }
+        .line01, .line02, .line03, .line04 {
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes line1 {
+            from { width: 0px; }
+            to { width:500px; }
+        }
+        @keyframes line2 {
+            from { height: 0px; }
+            to { height:500px; }
+        }
+        @keyframes line3 {
+            from { width: 0px; }
+            to { width:500px; }
+        }
+        @keyframes line4 {
+            from { height: 0px; }
+            to { height:500px; }
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <div class="line01"></div>
+        <div class="line02"></div>
+        <div class="line03"></div>
+        <div class="line04"></div>
+    </div>
+    
+</body>
+</html>
