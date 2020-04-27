@@ -34,7 +34,7 @@
             }
         });
         $("#gotoTop").click(function(){
-            $("html, body").animate({scrollTop:0}, 1000);
+            $("html, body").animate({scrollTop:0}, $(this).scrollTop() * 1.0);
         });
     </script>
     
