@@ -27,14 +27,15 @@
     
     <script>
          $(window).scroll(function(){
-            if($(this).scrollTop() > 300){
+            var sct = $(this).scrollTop();
+            if(sct > 300){
                 $("#gotoTop").fadeIn(500);
             } else {
                 $("#gotoTop").fadeOut(500);
             }
         });
         $("#gotoTop").click(function(){
-            $("html, body").animate({scrollTop:0}, 3000);
+            $("html, body").animate({scrollTop:0}, sct*3);
         });
     </script>
     
