@@ -22,10 +22,43 @@ $(document).ready(function(){
 //        }
 //    });
     
+    
     // 2 컨텐츠 박스 contents section ---------------------------------------------//
+    var listBtn = $("#howToShow .list_i");
+    var thumBtn = $("#howToShow .thum_i");
+    
     var container = $("#container");
     var section = container.find("section");
+    var sectionList = container.find("section.list");
+    var sectionThum = container.find("section.thum");
+    
+    sectionList.each(function(){
+        var sLength = section.length;
+        var listNum = Math.abs($(this).index() - sLength);
+        $(this).prepend("<div class='list_num'>" + listNum + "</div>");
+    });
+    
+    listBtn.click(function(){
+        
+        section.each(function(){
+            $(this).removeClass("thum");
+            $(this).addClass("list");
+        });
+        
+        $(".list_num").show();
+    });
+    thumBtn.click(function(){
+        
+        section.each(function(){
+            $(this).removeClass("list");
+            $(this).addClass("thum");
+        });
+        
+        $(".list_num").hide();
+    });
+    
     var secImg = section.find(">.imgBox>img");
+    
     var moreH = 3*(container.outerHeight()+100) - 100;
     
         // scroll animation--
@@ -64,30 +97,6 @@ $(document).ready(function(){
     (function init() {
         insertSectionFloat();
     })();
-    
-    
-    // 3 더보기 moreBtn ---------------------------------------------//
-    $("#moreBtn").append("<div class='downLine'></div>");
-    
-    var container = $("#container");
-    
-    $("#moreBtn").click(function(){
-        var num = 0;
-        var section = container.children("section");
-        var secH = section.outerHeight();
-        var conH = container.outerHeight();
-        var conHeight = 3*(secH + 100);
-        var maxHeight = (section.length-1) * (secH + 100) - conHeight;
-        
-        if (conH < maxHeight) {
-            num += 1;
-            container.stop().animate({"height": '+=' + conHeight });
-        } else if(conH >= maxHeight - conHeight || num > 3) {
-            num = 3;
-            container.stop().animate({"height": '+=' + conHeight });
-            $("#moreBtn").hide();
-        } else return;
-    });
     
     
     // 5 스크롤탑 gotoTop ---------------------------------------------//

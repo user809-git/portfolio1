@@ -1,18 +1,21 @@
 @charset "UTF-8"
 
-.imgBox img {
+
+#gnb li span:after {
+    display: none;
+    height: 0px;
+    width: 0px;
+}
+#gnb li:nth-child(2) span:after {
+    content: "";
     width: 100%;
-    filter: blur(2px) brightness(80%);
-    transform: scale(1, 1) translateY(-12%);
-    transition: transform 1s 0s;
+    height: 2px;
+    background-color: #000;
+    z-index: -1;
+    position: absolute;
+    left: 0%;
+    bottom: -5px;
 }
-
-    /*hover*/
-section:hover .imgBox img {
-    filter: blur(0) brightness(100%);
-    transform: scale(1.1, 1.1) translateY(-12%);
-}
-
 
 
 

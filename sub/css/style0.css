@@ -125,17 +125,6 @@ header { height: 85px; }
     font-size: 14px;
     color: #000;
 }
-#gnb li:nth-child(4) span:after {
-    content: "";
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    z-index: -1;
-    position: absolute;
-    left: 0%;
-    bottom: -5px;
-}
-
 #gnb li:hover span:after {
     content: "";
     width: 100%;
@@ -147,40 +136,21 @@ header { height: 85px; }
     bottom: -5px;
 }
 
-/* 화면 선택 howToShow */
-#howToShow {
-    width: 1200px;
-    margin: 0 auto;
-    height: 50px;
-    
-}
-#howToShow ul li {
-    float: right;
-}
-#howToShow ul li i {
-    display: block;
-    margin-right: 20px;
-    font-size: 22px;
-    color: #999;
-    cursor: pointer;
-}
-#howToShow ul li i:hover {
-    color: #111;
-}
 
 /* 컨텐츠들 contents */
-#container {
-    padding: 0;
-    margin: 0;
-    position: relative;
-    top: 0px;
-    width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-    display: table;
+@keyframes DownToUp {
+    0% { opacity: 0; transform: translateY(50%); } 
+    100% { opacity: 1; transform: translateY(0%); }
 }
 
-/*
+#container {
+    position: relative;
+    top: 00px;
+    width: 1200px;
+    margin: 0 auto;
+    height: 2900px;
+    overflow: hidden;
+}
 section.target {
     transform: translateY(0);
     visibility: visible;
@@ -201,161 +171,53 @@ div.imgBox {
 .imgBox img {
     width: 100%;
     filter: blur(2px) brightness(80%);
-    transform: scale(1, 1) translateY(-12%);
+    transform: scale(1.01, 1.01) translateY(-12%);
     transition: transform 1s 0s;
 }
-*/
-
-    /* thumnail 썸네일 화면 */
-section.thum {
+section {
     margin-bottom: 100px;
-    width: 49.5%;
-    float: left;
-    position: relative;
-    margin-right: 1%;
-    
-    transition: 0.5s;
-    transition-delay: 0.1s;
-}
-section.thum:nth-child(2n) { margin-right: 0; }
-section.thum:nth-child(21),
-section.thum:last-child { margin-bottom: 0px; }
-section.thum .imgBox {
-    width: 100%;
-    height: 334px;
-    overflow: hidden;
-}
-section.thum .imgBox img {
-    width: 100%;
-    filter: blur(2px);
-    transform: scale(1.01, 1.01);
-    transition: transform 1s 0s;
-}
-section.thum .txtBox {
-    display: block;
-    height: 150px;
-    padding-top: 20px;
-    position: relative;
     color: #111;
-    width: 100%;
+    position: relative;
 }
-section.thum .txtBox h3 {
-    font-family: 'NanumSquare', sans-serif;
-    font-weight: 400;
-    font-size: 30px;
+section h3 {
+    font-family: 'Open Sans', sans-serif;'NanumSquare';
+    font-weight: 300;
+    font-size: 50px;
     text-align: center;
     margin-bottom: 10px;
-    color: #111;
+    color: #fff;
     text-align: left;
-    width: 100%;
-    padding: 2px;
+    width: 80%;
 }
-section.thum .txtBox span {
+section p {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    font-size: 22px;
+    color: #fff;
+    float: left;
+    width: 80%;
+}
+section span {
     font-size: 20px;
-    color: #111;
-    position: relative;
+    color: #fff;
+    position: absolute;
     bottom: 0px;
     right: 0;
 }
-
-/*hover*/
-section.thum:hover > .imgBox > img {
-    filter: blur(0px);
-    transform: scale(1.05, 1.05);
-}
-/*---호버---*/
-
-
-    /* list board 리스트 화면 */
-section.list {
-    width: 100%;
-    height: 250px;
-    position: relative;
-    display: table-row;
-}
-section.list .imgBox {
-    display: table-cell;
-    float: left;
-    width: 25%;
-    height: 150px;
-    overflow: hidden;
-    transform: translateX(-300px);
-    transition: 0.5s;
-    transition-delay: 0.1s;
-    opacity: 0;
-}
-section.list .imgBox img {
-    width: 100%;
-}
-section.list .txtBox {
-    display: table-cell;
-    width: 65%;
-    height: 150px;
-    float: left;
-    margin-left: 30px;
+section .txtBox {
     display: block;
-    position: relative;
-    color: #111;
-    transform: translateX(-300px);
-    transition: 0.5s;
-    transition-delay: 0.1s;
-}
-section.list .txtBox h3 {
-    font-family: 'Open Sans', 'NanumSquare', sans-serif;
-    font-weight: 400;
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 10px;
-    color: #111;
-    text-align: left;
-    padding: 2px;
-}
-section.list .txtBox span {
-    float: right;
-    font-size: 30px;
-    line-height: 30px;
-    color: #111;
     position: absolute;
-    bottom: 10px;
-    right: 0px;
-    transform: translateX(300px);
-    transition: 0.5s;
-    transition-delay: 0.1s;
-}
-section.list .list_num {
-    width: 5%;
-    height: 150px;
-    
-    line-height: 50px;
-    float: left;
-    font-size: 50px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    color: #111;
-    text-decoration: underline;
-    
-    opacity: 1.0;
-    transition: 0.5s;
-    transition-delay: 0.1s;
+    right: 30px;
+    bottom: 30px;
+    color: #fff;
+    width: 60%;
 }
 
-/*hover*/
-section.list:hover > .imgBox {
-    opacity: 1.0;
-    transform: translateX(-40px);
+    /*hover*/
+section:hover .imgBox img {
+    filter: blur(0) brightness(100%);
+    transform: scale(1.1, 1.1) translateY(-12%);
 }
-section.list:hover > .txtBox {
-    transform: translateX(0px);
-}
-section.list:hover > .txtBox span {
-    transform: translateX(0px);
-}
-section.list:hover > .list_num {
-    transform: translateX(-100%);
-    opacity: 0;
-}
-/*---호버---*/
-
 
 /* 더보기 moreBtn */
 #moreBtn {
@@ -494,8 +356,6 @@ section.list:hover > .list_num {
 #gotoTop:hover {
     opacity: 0.8;
 }
-
-
 
 
 
