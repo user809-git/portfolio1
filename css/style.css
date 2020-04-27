@@ -274,7 +274,8 @@ div.underWrap {
     float: left;
     z-index: 0;
 }
-.scrollBox > button.more {
+.scrollBox > a.more {
+    display: block;
     margin-top: 90px;
     margin-right: 55px;
     margin-left: 100px;
