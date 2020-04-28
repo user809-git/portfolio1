@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
     var ht = $(window).height();
             var topBox = $(".top");
             topBox.height(ht);
@@ -67,23 +67,26 @@ $(document).ready(function(){
     var nowScroll = $(window).scrollTop();
     var delayPosition = 100;
     
-    section.eq(0).addClass('up');
+    $(document).ready(function(){
+        floatUp();
+    });
     
     $(window).on("resize", function(){
         insertSectionFloat();
+        
     });
     
-    $(window).on("scroll", function(){
+    function floatUp() {
         var position = $(window).scrollTop() + windowheight;
         var readySection = $("section.ready");
-        
+
         readySection.each(function(){
             if(!$(this).hasClass("up") && $(this).data('offsetTop') < position){
                 $(this).addClass('up');
                 $(this).removeClass('ready');
             }
         });
-    });
+    }
     
     function insertSectionFloat() {
         windowheight = $(window).height();
