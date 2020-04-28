@@ -35,7 +35,14 @@
             }
         });
         $("#gotoTop").click(function(){
-            $("html, body").animate({scrollTop:0}, 3000);
+            var sct = $(window).scrollTop();
+            if(sct > 300 && sct <= 2400){
+                $("html, body").animate({scrollTop:0}, sct * 0.5);
+            } else if(sct > 2400 && sct <= 7000){
+                $("html, body").animate({scrollTop:0}, sct * 0.4);
+            } else if(sct > 7000 && sct < 10000){
+                $("html, body").animate({scrollTop:0}, sct * 0.2);
+            }
         });
     </script>
     
