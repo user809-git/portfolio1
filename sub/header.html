@@ -10,6 +10,14 @@
             </div>
             <div id="toggle_search">
                 <img src="img/i_search.png" alt="goSearch" class="goSearch">
+                <img src="img/i_close.png" alt="searchX" class="searchX blind">
+                <fieldset id="searchBox">
+                    <form action="#" method="get">
+                        <label for="search_area">검색창</label>
+                        <input type="search" name="search_area" required autofocus>
+                        <button type="button">SEARCH</button>
+                    </form>
+                </fieldset>
             </div>
             <ul id="gnb">
                 <li><span><a href="https://user809-git.github.io/portfolio1/sub/011.html">WE DESIGN</a></span></li>
@@ -31,6 +39,22 @@
             } else if (sct == 0){
                 header.css({"top":"0"});
             }
+        });
+        $(document).ready(function(){
+            var searchBtn = $("#toggle_search .goSearch");
+            var closeBtn = $("#toggle_search .searchX");
+            var searchField = $("#toggle_search #searchBox");
+            
+            searchBtn.click(function(){
+                searchField.show().stop().animate({"width":"300px"});
+                $(this).addClass("blind");
+                closeBtn.removeClass("blind");
+            });
+            closeBtn.click(function(){
+                searchField.stop().animate({"width":"0%"}).hide();
+                $(this).addClass("blind");
+                searchBtn.removeClass("blind");
+            });
         });
     </script>
     
