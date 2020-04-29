@@ -210,6 +210,11 @@ header { height: 85px; }
 }
 
 /* 컨텐츠들 contents */
+@keyframes DownToUp {
+    0% { opacity: 0; transform: translateY(50%); } 
+    100% { opacity: 1; transform: translateY(0%); }
+}
+
 #container {
     padding: 0;
     margin: 0;
