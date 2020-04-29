@@ -106,7 +106,7 @@ img, input, select, fieldset, label {
 }
 #nav {
     float: right;
-    width: 75%;
+    width: calc(100% - 230px);
 }
 .menuBtn, .goSearch, .searchX {
     width: 20px;
