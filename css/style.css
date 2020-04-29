@@ -159,7 +159,7 @@ img, input, select, fieldset, label {
     float: right;
     margin-top: 30px;
     z-index: 300;
-    width: 45%;
+    width: 50%;
 }
 #gnb li {
     display: block;
