@@ -70,6 +70,9 @@ $(function(){
     $(document).ready(function(){
         floatUp();
     });
+    $(window).on("scroll", function(){
+        floatUp();
+    });
     
     $(window).on("resize", function(){
         insertSectionFloat();
