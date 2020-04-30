@@ -169,8 +169,13 @@ img, input, select, fieldset, label {
 }
 #gnb li span {
     display: block;
-    cursor: pointer;
-    
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+}
+#gnb li span a {
+    display: block;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 14px;
