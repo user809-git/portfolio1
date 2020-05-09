@@ -530,6 +530,155 @@ section.list:hover > .list_num {
     opacity: 0.8;
 }
 
+/* 개인정보처리방침 contentRule */
+.contentRule {
+    display: none;
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 10vh 10vw;
+    box-sizing: border-box;
+    z-index: 998;
+    background-color: rgba(0,0,0,0.7);
+}
+.contentRule .contBox {
+    display: block;
+    position: absolute;
+    top: 10vh;
+    left: 10vh;
+    right: 10vh;
+    bottom: 10vh;
+    width: 80%;
+    height: 80%;
+    z-index: 999;
+    background-color: #fff;
+    margin: 0;
+    padding: 5%;
+    box-sizing: border-box;
+    
+    font-family: 'NanumSquare', 'Open Sans', sans-serif;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+.contentRule .contBox a.closeBtn {
+    position: absolute;
+    top: 15px;
+    right: -50px;
+    width: 37px;
+    height: 37px;
+}
+.contentRule .contBox a.closeBtn > span {
+    display: block;
+    width: 52px;
+    height: 2px;
+    background-color: #fff;
+    transform: rotate(45deg) translateX(2px);
+    transform-origin: center;
+}
+.contentRule .contBox a.closeBtn > span+span {
+    transform: rotate(135deg) translateX(-1px);
+    transform-origin: center;
+}
+.contentRule .contBox #rules {
+    width: 100%; height: 100%;
+    overflow-y: scroll;
+}
+.contentRule .contBox #rules::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: transparent;
+}
+.contentRule .contBox #rules::-webkit-scrollbar-thumb {
+    background-color: #111;
+    border-radius: 4px;
+}
+.contentRule .contBox #rules::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+.contentRule #rules {
+    line-height: 1.85;
+}
+
+.contentRule #rules h1, .contentRule #rules h2 {
+    padding-bottom: 1.25vw;
+}
+.contentRule #rules h3 {
+    padding: 1.15vw 0;
+}
+.contentRule #rules h2 { font-size: 1.35em; }
+.contentRule #rules h2 span {
+    display: block;
+    font-weight: normal;
+    font-size: 16px;
+    padding-left: 22px;
+}
+
+.contentRule #rules .one-depth > li {
+    margin-top: 4vw;
+}
+.contentRule #rules .two-depth > li {
+    margin-top: 1.25vw;
+}
+.contentRule #rules .three-depth > li {
+    margin-top: 1.17vw;
+}
+
+.contentRule #rules table {
+    word-break: keep-all;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+    font-size: 14px;
+    margin: 1.05vw 0;
+}
+.contentRule #rules table.type-short {
+    width: 365px;
+}
+.contentRule #rules table.type-wide {
+    width: 780px;
+}
+.contentRule #rules table tr th,
+.contentRule #rules table tr td {
+    padding: 10px;
+    border: 1px solid #000;
+    vertical-align: middle;
+}
+.contentRule #rules table.type-short tr th:first-child {
+    height: 70px;
+}
+.contentRule #rules table.type-short tr:first-child th:first-child {
+    width: 121px;
+    height: 39px;
+}
+.contentRule #rules table.type-short tr th:last-child {
+    width: 240px;
+}
+.contentRule #rules table.type-wide tr th:first-child {
+    width: 370px;
+}
+.contentRule #rules table.type-wide tr td:first-child {
+    width: 370px;
+    text-align: left;
+}
+.contentRule #rules table.type-wide tr td:last-child {
+    width: 300px;
+    text-align: left;
+}
+.contentRule #rules table.type-wide tr:first-child th:nth-child(2) {
+    width: 70px;
+    height: 39px;
+}
+.contentRule #rules a {
+    text-decoration: underline;
+}
 
 
 
