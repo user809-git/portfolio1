@@ -30,16 +30,30 @@
     
     <script>
         var header = $("header #head");
-        $(window).scroll(function(){
-            var sct = $(this).scrollTop()
-            var topY = -1 * sct;
+        var didScroll; 
+        var lastScrollTop = 0; 
+        var delta = 5; 
+        var navbarHeight = header.outerHeight();
 
-            if(sct > 0 && sct < 100){
-                header.stop().animate({"top":topY}, 700);
-            } else if (sct == 0){
-                header.css({"top":"0"});
-            }
-        });
+        $(window).scroll(function(event){ didScroll = true; });
+
+        setInterval(function() { 
+            if (didScroll) { 
+                hasScrolled(); 
+                didScroll = false; } }, 250);
+
+            function hasScrolled() { 
+                var st = $(this).scrollTop(); 
+                if(Math.abs(lastScrollTop - st) <= delta) return; 
+                if (st > lastScrollTop && st > navbarHeight){
+                    header.removeClass('nav-down').addClass('nav-up'); } 
+                else {
+                    if(st + $(window).height() < $(document).height()) { 
+                        header.removeClass('nav-up').addClass('nav-down'); 
+                    } 
+            } 
+            lastScrollTop = st; 
+        }
         $(document).ready(function(){
             var searchBtn = $("#toggle_search .goSearch");
             var closeBtn = $("#toggle_search .searchX");
