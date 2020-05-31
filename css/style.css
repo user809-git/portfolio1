@@ -96,6 +96,7 @@ img, input, select, fieldset, label {
     margin: 0 auto;
     z-index: 300;
 }
+.nav-up { top: -80px !important; transition-duration: 1s; }
 
 .logo {
     margin-top: 30px;
