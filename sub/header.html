@@ -3,7 +3,7 @@
 <body>
 
     <div id="head">
-        <h1><a href="https://user809-git.github.io/portfolio1/index.html"><img src="img/samsungDesign_logo.png" alt="samsungDesignlogo" class="logo"></a></h1>
+        <h1><a href="https://user809-git.github.io/portfolio1/index.html" target="_blank"><img src="img/samsungDesign_logo.png" alt="samsungDesignlogo" class="logo"></a></h1>
         <div id="nav">
             <div id="menuBtn">
                 <img src="img/i_menu.png" alt="menuBtn" class="menuBtn">
@@ -20,10 +20,10 @@
                 </fieldset>
             </div>
             <ul id="gnb">
-                <li><span><a href="https://user809-git.github.io/portfolio1/sub/011.html">WE DESIGN</a></span></li>
-                <li><span><a href="https://user809-git.github.io/portfolio1/sub/012.html">WE DISCOVER</a></span></li>
-                <li><span><a href="https://user809-git.github.io/portfolio1/sub/013.html">ABOUT US</a></span></li>
-                <li><span><a href="https://user809-git.github.io/portfolio1/sub/014.html">NEWS</a></span></li>
+                <li><span><a href="https://user809-git.github.io/portfolio1/sub/011.html" target="_blank">WE DESIGN</a></span></li>
+                <li><span><a href="https://user809-git.github.io/portfolio1/sub/012.html" target="_blank">WE DISCOVER</a></span></li>
+                <li><span><a href="https://user809-git.github.io/portfolio1/sub/013.html" target="_blank">ABOUT US</a></span></li>
+                <li><span><a href="https://user809-git.github.io/portfolio1/sub/014.html" target="_blank">NEWS</a></span></li>
             </ul>
         </div>
     </div>
@@ -46,10 +46,12 @@
                 var st = $(this).scrollTop(); 
                 if(Math.abs(lastScrollTop - st) <= delta) return; 
                 if (st > lastScrollTop && st > navbarHeight){
-                    header.removeClass('nav-down').addClass('nav-up'); } 
-                else {
+                    header.removeClass('nav-down').addClass('nav-up');
+                    $("#gnb").slideUp();
+                } else {
                     if(st + $(window).height() < $(document).height()) { 
-                        header.removeClass('nav-up').addClass('nav-down'); 
+                        header.removeClass('nav-up').addClass('nav-down');
+                        $("#gnb").slideUp();
                     } 
             } 
             lastScrollTop = st; 
@@ -60,14 +62,23 @@
             var searchField = $("#toggle_search #searchBox");
             
             searchBtn.click(function(){
-                searchField.show().stop().animate({"width":"300px"});
+                if($(".top").outerWidth() >= 1024){
+                    searchField.show().stop().animate({"width": '300px'});
+                } else searchField.slideDown();
+                
                 $(this).addClass("blind");
                 closeBtn.removeClass("blind");
             });
             closeBtn.click(function(){
-                searchField.stop().animate({"width":"0%"}).hide();
+                if($(".top").outerWidth() >= 1024){
+                    searchField.stop().animate({"width": '0%'}).hide();
+                } else searchField.slideUp();
                 $(this).addClass("blind");
                 searchBtn.removeClass("blind");
+            });
+            
+            $(".menuBtn").click(function(){
+                $("#gnb").slideToggle();
             });
         });
     </script>
