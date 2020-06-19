@@ -1,6 +1,17 @@
 @charset "UTF-8"
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('nanumsquare.css');
 
+
+/*
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 300;
+ src: url(NanumSquareL.eot);
+ src: url(NanumSquareL.eot?#iefix) format('embedded-opentype'),
+      url(NanumSquareL.woff) format('woff'),
+      url(NanumSquareL.ttf) format('truetype');
+}
 @font-face {
  font-family: 'NanumSquare';
  font-weight: 400;
@@ -25,45 +36,79 @@
       url(NanumSquareEB.woff) format('woff'),
       url(NanumSquareEB.ttf) format('truetype');
 }
-@font-face {
- font-family: 'NanumSquare';
- font-weight: 300;
- src: url(NanumSquareL.eot);
- src: url(NanumSquareL.eot?#iefix) format('embedded-opentype'),
-      url(NanumSquareL.woff) format('woff'),
-      url(NanumSquareL.ttf) format('truetype');
-}
+*/
 
+
+/* ANIMATION */
 @keyframes UpToDown {
-    0% { opacity: 0; transform: translateY(-100%); }
-    100% { opacity: 1; transform: translateY(0%); }
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+        -ms-transform: translateY(0%);
+    }
 }
 @keyframes DownToUp {
-    0% { opacity: 0; transform: translateY(100%); }
-    100% { opacity: 1; transform: translateY(0%); }
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+        -ms-transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+        -ms-transform: translateY(0%);
+    }
 }
 @keyframes RightToLeft {
-    0% { opacity: 0; transform: translateX(100%); }
-    100% { opacity: 1; transform: translateX(0%); }
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+        -ms-transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+        -ms-transform: translateX(0%);
+    }
 }
 @keyframes LeftToRight {
-    0% { opacity: 0; transform: translateX(-100%); }
-    100% { opacity: 1; transform: translateX(0%); }
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+        -ms-transform: translateX(0%);
+    }
 }
 
-/* reset */
-html, body {
-    width: 100%;
-    height: 100%;
+@keyframes imgMove {
+    0% { background-position: -20px 0px; }
+    100% { background-position: -500px 0px; }
 }
+/* ANIMATION END ---*/
+
+
+/* RESET */
 html, body, div, h1, h2, h3, img, ul, li, p {
     margin: 0; padding: 0;
     transition-duration: all 0.2s;
 }
+html, body {
+    width: 100%;
+    height: 100%;
+}
 ul, li {
     list-style: none;
 }
-a {
+a, a:active, a:visited {
     text-decoration: none;
     color: inherit;
 }
@@ -77,13 +122,9 @@ img, input, select, fieldset, label {
     background-color: transparent;
 }
 
-#wrap {
-    width: 100%;
-    min-width: 1200px;
-    margin: 0 auto;
-}
 
-/* 헤더 header */
+
+/* 00 HEADER */
 #head {
     max-width: 1200px;
     width: 100%;
@@ -96,8 +137,10 @@ img, input, select, fieldset, label {
     margin: 0 auto;
     z-index: 300;
 }
-.nav-up { top: -80px !important; transition-duration: 1s; }
-
+.nav-up {
+    top: -80px !important;
+    transition-duration: 1s;
+}
 .logo {
     margin-top: 30px;
     height: 30px;
@@ -107,7 +150,7 @@ img, input, select, fieldset, label {
 }
 #nav {
     float: right;
-    width: calc(100% - 230px);
+    width: 75%;
 }
 .menuBtn, .goSearch, .searchX {
     width: 20px;
@@ -144,7 +187,8 @@ img, input, select, fieldset, label {
     text-indent: -9999%;
 }
 #searchBox input[type=search] {
-    line-height: 24px;
+    font-size: 1.5em;
+    line-height: 1;
     width: 72%;
 }
 #searchBox button {
@@ -152,7 +196,7 @@ img, input, select, fieldset, label {
     letter-spacing: 2px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 1em;
 }
 /* 검색창 끝 -------------- */
 
@@ -160,7 +204,7 @@ img, input, select, fieldset, label {
     float: right;
     margin-top: 30px;
     z-index: 300;
-    width: 45%;
+    width: 50%;
 }
 #gnb li {
     display: block;
@@ -172,14 +216,14 @@ img, input, select, fieldset, label {
     display: block;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 1em;
     color: #000;
 }
 #gnb li span a {
     display: block;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 1em;
     color: #000;
 }
 #gnb li:hover span:after {
@@ -192,6 +236,58 @@ img, input, select, fieldset, label {
     left: 0%;
     bottom: -5px;
 }
+/* 00 header 끝*/
+
+
+/* 01 TOP CONTENT VEDIO */
+.top {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.top .backImg {
+    height: 100%;
+    width: 100%;
+    z-index: -9;
+    overflow: hidden;
+}
+.top video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.top .conText {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    margin: 43vh auto 0;
+}
+/* 01 top-main content 끝*/
+
+
+/* 00-01 CONTAINER */
+#container {
+    overflow: hidden;
+    width: 100%;
+}
+.conText > h3 {
+    font-size: 3.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+.conText > p {
+    font-size: 1.5em;
+    font-family: 'NanumSquare';
+    font-weight: 400;
+}
+.mobBr {display: none;}
 
 /* bacgkgroundTitle */
 .bacgkgroundTitle {
@@ -204,11 +300,16 @@ img, input, select, fieldset, label {
     font-size: 120px;
     line-height: 95px;
     color: #f7f7f7;
+    font-family: 'NanumSquare';
+    font-weight: 400;
     position: absolute;
     top: -50px;
+    
+    -ms-filter: blur(3px);
     filter: blur(3px);
     
     transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
     transition:0.5s;
     visibility: hidden;
     opacity: 0;
@@ -225,72 +326,31 @@ img, input, select, fieldset, label {
     display: block;
     font-size: 120px;
     color: #e0e0e0;
+    font-family: 'NanumSquare';
+    font-weight: 300;
     position: absolute;
     top: -110px;
     left: -50px;
     
     transform: translate(100%, 100%);
+    -ms-transform: translate(100%, 100%);
     transition:0.5s;
     visibility: hidden;
     opacity: 0;
 }
 #slide:hover > .bacgkgroundTitle > span > a {
     transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
     opacity: 1.0;
     transition:0.5s;
     visibility: visible;
 }
 /* 백그라운드에 메뉴 타이틀 넣기 --- 끝 */
+/* 00-01 container 공통 // */
 
-/* 컨텐츠들 contents */
-#container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    width: 100%;
-}
-.conText > h3 {
-    font-size: 50px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
-}
-.conText > p {
-    font-size: 22px;
-    font-family: 'NanumSquare';
-    font-weight: 300;
-}
 
-/* 1 .top */
-.mainCon div.backImg {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -9;
-    overflow: hidden;
-}
-.backImg video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.mainCon > .conText {
-    max-width: 1200px;
-    width: 100%;
-    height: 90%;
-    margin: 450px auto 344px;
-/*
-    background-color: red;
-    opacity: 0.5;
-*/
-}
-
-/* 2 .under */
-div.underWrap {
+/* 02 SECOND BOX UNDER */
+.underWrap {
     position: relative;
     top: 0;
     
@@ -323,7 +383,7 @@ div.underWrap {
     border-bottom: 2px solid #111;
     
     color: #111;
-    font-size: 14px;
+    font-size: 1em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     cursor: pointer;
@@ -338,8 +398,20 @@ div.underWrap {
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: #fff;
+    
+/*--SCROLL BAR css*/
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: black white;
+    /* IE */
+    scrollbar-face-color: #111;
+    scrollbar-base-color: #fff;
+    scrollbar-track-color: #fff;
+    scrollbar-arrow-color: #fff;
+    scrollbar-shadow-color: #111;
+    scrollbar-darkshadow-color: none;
 }
-/*--scroll bar css*/
+/*-webkit-*/
 .scrollContent::-webkit-scrollbar {
     width: 8px;
     background-color: transparent;
@@ -351,7 +423,12 @@ div.underWrap {
 .scrollContent::-webkit-scrollbar-track {
     background-color: #fff;
 }
-/*--스크롤 바 css*/
+.scrollContent::-webkit-scrollbar-button {
+    display: none;
+    background-color: transparent;
+}
+/*--스크롤 바 css 끝*/
+
 .scrollContent > div {
     width: 400px;
     height: 90px;
@@ -364,8 +441,8 @@ div.underWrap {
 .scrollContent h5 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 1.5em;
+    line-height: 1;
     text-align: left;
     margin: 0 50px 22px 0;
 }
@@ -373,25 +450,27 @@ div.underWrap {
     padding-left: 40px;
     font-family: 'NanumSquare';
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 1.35em;
+    line-height: 1.35em;
     display: block;
     width: 300px;
     float: left;
 }
 .scrollContent span {
     display: block;
-    font-size: 8px;
+    font-size: 0.5em;
     text-align: right;
     font-family: Arial;
     margin-top: 55px;
 }
+
 .under.up {
-    animation: RightToLeft 1s;
     visibility: visible;
+    animation: RightToLeft 1s, imgMove 20s 1s infinite alternate ; 
 }
 .under {
     transform: translateX(0%);
+    -ms-transform: translateX(0%);
     transition:0.5s;
     visibility: hidden;
     
@@ -404,14 +483,7 @@ div.underWrap {
     background-position: -20px 0px;
     z-index: -11;
     
-    animation: imgMove 30s 2s infinite; 
 }
-@keyframes imgMove {
-    0% { background-position: -20px 0px; }
-    50% { background-position: -500px 0px; }
-    100% { background-position: -19px 0px; }
-}
-
 .under > .conText {
     text-align: left;
     margin-top: 54px;
@@ -419,13 +491,15 @@ div.underWrap {
     color: #fff;
 }
 
-/* 3 .third */
+
+/* 03 BOX THIRD */
 .third.up {
     animation: DownToUp 1s;
     visibility: visible;
 }
 .third {
     transform: translateY(0%);
+    -ms-transform: translateY(0%);
     transition:0.5s;
     visibility: hidden;
     
@@ -446,13 +520,15 @@ div.underWrap {
     margin-top: 180px;
 }
 
-/* 4 .fourth */
+
+/* 04 BOX FOURTH */
 .fourth.up {
     animation: LeftToRight 1s;
     visibility: visible;
 }
 .fourth {
     transform: translateX(0%);
+    -ms-transform: translateX(0%);
     transition:0.5s;
     visibility: hidden;
     
@@ -480,13 +556,15 @@ div.underWrap {
     text-align: left;
 }
 
-/* 5 .last */
+
+/* 05 LAST BOX */
 .last.up {
     animation: RightToLeft 1s;
     visibility: visible;
 }
 .last {
     transform: translateX(0%);
+    -ms-transform: translateX(0%);
     transition:0.5s;
     visibility: hidden;
     
@@ -523,36 +601,34 @@ div.underWrap {
     text-align: left;
 }
 
-/* 뉴스 slide news */
+
+/* 06 NEWS SLIDE BOX */
 #slide.up {
     animation: DownToUp .8s;
     visibility: visible;
+    opacity: 1;
 }
 #slide {
     transform: translateX(0%);
+    -ms-transform: translateX(0%);
     transition:0.5s;
     visibility: hidden;
     
     position: relative;
-    top: 2320px;
     width: 1200px;
     height: 740px;
-    margin: 590px auto 0 auto;
+    margin: -180px auto 0;
 }
-
 #next {
     position: absolute;
     top: 340px;
     right: 50px;
     z-index: 100;
     width: 45px;
-    opacity: 0.3;
-/*    display: none;*/
-}
-#next img {
-    width: 45px;
     height: 90px;
-    cursor: default;
+    opacity: 0.3;
+    background: url('../img/arr.png') no-repeat right top;
+    background-size: cover;
 }
 #prev {
     position: absolute;
@@ -560,19 +636,14 @@ div.underWrap {
     left: 50px;
     z-index: 100;
     width: 45px;
-    opacity: 0.3;
-/*    display: none;*/
-}
-#prev img {
-    width: 45px;
     height: 90px;
-    cursor: default;
+    opacity: 0.3;
+    background: url('../img/arr.png') no-repeat left top;
+    background-size: cover;
 }
 #next.active, #prev.active {
-    opacity: 1.0;
+    opacity: 0.9;
     display: block;
-}
-#next.active img, #prev.active img {
     cursor: pointer;
 }
 
@@ -616,7 +687,7 @@ div.underWrap {
     background-position: center center;
 }
 
-div.subTitle {
+.subTitle {
     width: 1200px;
     margin: 580px auto;
     color: #fff;
@@ -624,15 +695,18 @@ div.subTitle {
 .subTitle h3 {
     font-family: 'NanumSquare';
     font-weight: 300;
-    font-size: 50px;
+    font-size: 3.5em;
     text-align: center;
     margin-bottom: 10px;
 }
 .subTitle span {
     float: left;
-    margin-left: 475px;
-    font-size: 20px;
+    margin-left: 475px;    
+}
+.subTitle span a {
+    font-size: 1.5em;
     text-align: left;
+    line-height: 1;
 }
 .subTitle p {
     font-family: 'Open Sans', sans-serif;
@@ -643,12 +717,12 @@ div.subTitle {
     text-align: right;
 }
 
-/* 푸터 footer */
+
+/* 00 FOOTER */
 #foot {
     position: relative;
-    top: 2330px;
     width: 1200px;
-    margin: 0 auto 60px;
+    margin: 10px auto 60px;
     height: 140px;
 }
 #bmenu {
@@ -673,7 +747,7 @@ div.subTitle {
     line-height: 80px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 0.85em;
     color: #8f8f8f;
 }
 #bmenu li:hover a {
@@ -682,29 +756,35 @@ div.subTitle {
 
 #address {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 20px;
 }
-#address img#bLogo {
-    width: 130px;
-    margin-left: 33%;
-/*    padding-bottom: 60px;*/
+#address h2 {
     float: left;
+    width: 100px;
+    margin-left: 33%;
+    margin-bottom: 60px;
+}
+#address #bLogo {
+    width: 100%;
     cursor: pointer;
 }
 #address p {
-    float: left;
+    float: right;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 1em;
     color: #555;
-    padding-right: 350px;
-    margin: 10px auto 20px 30px;
+    padding-right: 280px;
+    margin: 10px auto 5px 30px;
+}
+#address p+p {
+    padding-right: 420px;
 }
 #address span {
     float: left;
     font-family: 'NanumSquare';
     font-weight: 400;
-    font-size: 14px;
+    font-size: 1em;
     color: #555;
     margin-left: 30px;
     
@@ -712,38 +792,11 @@ div.subTitle {
     font-size: 13px;
 /*    margin-bottom: 70px;*/
 }
-
-/* 탑버튼 gotoTop */
-#gotoTop {
-    display: none;
-    width: 70px;
-    height: 70px;
-    
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background-color: #f9f9f9;
-    opacity: 0.5;
-    border-radius: 5px;
-    z-index: 999;
-}
-#gotoTop a {
-    display: block;
-    width: 70px;
-    height: 70px;
-}
-#gotoTop a img {
-    width: 35px;
-    height: 35px;
-    margin-top: 20px;
-    margin-left: 20px;
-    z-index: 1000;
-}
-#gotoTop:hover {
-    opacity: 0.8;
+#address span:first-child {
+    margin-left: 0;
 }
 
-/* 개인정보처리방침 contentRule */
+/* 00-02 개인정보처리방침 contentRule TERMS */
 .contentRule {
     display: none;
     visibility: visible;
@@ -800,6 +853,17 @@ div.subTitle {
 .contentRule .contBox #rules {
     width: 100%; height: 100%;
     overflow-y: scroll;
+    
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: black lightgray;
+    /* IE */
+    scrollbar-face-color: #111;
+    scrollbar-base-color: #f1f1f1;
+    scrollbar-track-color: #f1f1f1;
+    scrollbar-arrow-color: #f1f1f1;
+    scrollbar-shadow-color: #111;
+    scrollbar-darkshadow-color: none;
 }
 .contentRule .contBox #rules::-webkit-scrollbar {
     width: 8px;
@@ -892,6 +956,48 @@ div.subTitle {
 .contentRule #rules a {
     text-decoration: underline;
 }
+/* 00-02 TERMS END --*/
+/* 00 FOOTER 끝 */
+
+
+/* 00-03 탑버튼 gotoTop */
+#gotoTop {
+    display: none;
+    width: 70px;
+    height: 70px;
+    
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #f9f9f9;
+    opacity: 0.5;
+    border-radius: 5px;
+    z-index: 999;
+}
+#gotoTop a {
+    display: block;
+    width: 70px;
+    height: 70px;
+}
+#gotoTop a img {
+    width: 35px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 20px;
+    z-index: 1000;
+}
+#gotoTop:hover {
+    opacity: 0.8;
+}
+/* 00-03 GO TO TOP -- END */
+
+
+
+
+
+
+
+
 
 
 
