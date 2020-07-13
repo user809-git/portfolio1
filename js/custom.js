@@ -1,14 +1,14 @@
 $(document).ready(function(){
     var ht = $(window).height();
-            var topBox = $(".top");
-            topBox.height(ht);
-            
-            $(window).on("resize", function(){
-                var ht = $(window).height();
-                topBox.height(ht);
-                
+    var topBox = $(".top");
+    topBox.height(ht);
+
+    $(window).on("resize", function(){
+        var ht = $(window).height();
+        topBox.height(ht);
+
 //                slidePosition();
-            });
+    });
     
     // 1 gnb ---------------------------------------------//
 //    var header = $("header");

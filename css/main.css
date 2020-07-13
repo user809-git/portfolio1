@@ -805,9 +805,9 @@ img, input, select, fieldset, label {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 10vh 10vw;
+    width: 100%;
+    height: 100%;
+    padding: 10vh 0;
     box-sizing: border-box;
     z-index: 998;
     background-color: rgba(0,0,0,0.7);
@@ -817,7 +817,7 @@ img, input, select, fieldset, label {
     position: absolute;
     top: 10vh;
     left: 10vh;
-    right: 10vh;
+    right: 10vw;
     bottom: 10vh;
     width: 80%;
     height: 80%;
@@ -853,6 +853,7 @@ img, input, select, fieldset, label {
 .contentRule .contBox #rules {
     width: 100%; height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
     
     /* Firefox */
     scrollbar-width: thin;
