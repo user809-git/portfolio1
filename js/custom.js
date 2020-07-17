@@ -6,8 +6,10 @@ $(document).ready(function(){
     $(window).on("resize", function(){
         var ht = $(window).height();
         topBox.height(ht);
-
-//                slidePosition();
+        
+        if($("#head").innerWidth() == 1200) {
+            $("#gnb").slideDown();
+        }
     });
     
     // 1 gnb ---------------------------------------------//
@@ -30,9 +32,8 @@ $(document).ready(function(){
     
     
     // 2 contents ---------------------------------------------//
-    
     var windowheight = $(window).height();
-    var delayPosition = 200;
+    var delayPosition = 100;
     
     $(window).scroll(function() {
         var content2 = $(".contents.under");
