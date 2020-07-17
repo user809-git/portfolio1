@@ -90,11 +90,14 @@
             
             var menuBtn = $(".menuBtn");
             menuBtn.click(function(){
-                $("#gnb").slideToggle();
-                if(isDown == 1){
+                
+                if(isDown != 2) {
                     closeBtn.trigger('click');
+                    $("#gnb").slideDown();
                     isDown = 2;
-                } else if(isDown != 0) {
+                    
+                } else if(isDown == 2) {
+                    $("#gnb").slideUp();
                     isDown = 0;
                 }
             });
