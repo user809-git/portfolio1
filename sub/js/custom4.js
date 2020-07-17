@@ -1,12 +1,12 @@
 $(function(){
     var ht = $(window).height();
-            var topBox = $(".top");
-            topBox.height(ht);
-            
-            $(window).on("resize", function(){
-                var ht = $(window).height();
-                topBox.height(ht);
-            });
+    var topBox = $(".top");
+    topBox.height(ht);
+
+    $(window).on("resize", function(){
+        var ht = $(window).height();
+        topBox.height(ht);
+    });
     // 1 gnb ---------------------------------------------//
 //    var header = $("header #head");
 //    $(window).scroll(function(){
@@ -77,6 +77,10 @@ $(function(){
     $(window).on("resize", function(){
         insertSectionFloat();
         
+        // list_num 보이기
+        if($(window).width() < 640){
+            $(".list_num").show();
+        }
     });
     
     function floatUp() {

@@ -1,14 +1,12 @@
-@charset "UTF-8"
 
-@media all and (min-width:1280px) {
+@media screen and (min-width:1280px) {
     #wrap {
         width: 100%;
         min-width: 1200px;
         margin: 0 auto;
     }
 }
-
-@media all and (min-width:1024px) and (max-width:1279px) {
+@media screen and (min-width:1024px) and (max-width:1279px) {
     body { font-size: 16px; }
     
     #wrap {
@@ -53,7 +51,6 @@
         clear: both;
         width: 100%;
         text-align: right;
-        padding-left: 10px;
     }
     #gnb li span {
         font-size: 1.2em;
@@ -255,6 +252,7 @@
     .contentRule #rules table tr td {
         font-size: 0.8em;
     }
+    .contentRule #rules table.type-short,
     .contentRule #rules table.type-wide {
         width: 90%;
     }
@@ -268,11 +266,12 @@
 }
 /* (min-width:1024px) and (max-width:1279px) */
 
-@media all and (min-width:640px) and (max-width:1023px) {
+@media screen and (min-width:640px) and (max-width:1023px) {
     #wrap {
         width: 100%;
         overflow: hidden;
     }
+    /* 00 HEADER */
     #head {
         max-width: 1000px;
         width: 90%;
@@ -308,7 +307,6 @@
         clear: both;
         width: 100%;
         text-align: right;
-        padding-left: 10px;
     }
     #gnb li span {
         font-size: 1.2em;
@@ -337,6 +335,12 @@
     /* 검색창 끝 -------------- */
     
     
+    .conText > h3 {
+        font-size: 2.5em;
+    }
+    .conText > p {
+        font-size: 1.1em;
+    }
     /* 01 TOP CONTENT VEDIO */
     .top {
         width: 100%;
@@ -372,11 +376,11 @@
         float: none;
         clear: both;
         position: absolute;
-        top: 100px;
-        right: calc(20vw - 56px);
+        top: 65px;
+        right: 15vw;
         
         margin: 0;
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     .scrollBox > a.more:after {
         content: "";
@@ -387,11 +391,21 @@
         float: none;
         clear: both;
         position: absolute;
-        top: 110px;
-        left: 25vw;
+        top: 125px;
+        left: 17vw;
         
-        width: 50vw;
+        width: 65vw;
+        height: 430px;
         margin: 0 auto;
+    }
+    .scrollContent > div {
+        margin-bottom: 60px;
+    }
+    .scrollContent h5 {
+        font-size: 1.2em;
+    }
+    .scrollContent p {
+        font-size: 1em;
     }
     
     .under.up {
@@ -410,10 +424,10 @@
         left: 15vw;
     }
     .under > .conText > h3 {
-        font-size: 4em;
+        font-size: 3em;
     }
     .under > .conText > p {
-        font-size: 2em;
+        font-size: 1.5em;
     }
     
     /* 03 THIRD */
@@ -470,11 +484,13 @@
     }
     #next {
         top: 47%;
+        right: 30px;
         width: 35px;
         height: 70px;
     }
     #prev {
         top: 47%;
+        left: 30px;
         width: 35px;
         height: 70px;
     }
@@ -488,6 +504,7 @@
     }
     #slideBox li {
         position: relative;
+        height: 100%;
     }
     .news2 {
         left: 0;
@@ -502,30 +519,96 @@
         width: 100%;
         margin: 460px auto 0;
     }
+    .subTitle h3 {
+        font-size: 2em;
+        font-weight: 700;
+    }
     .subTitle span {
-        margin-left: 38%;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .subTitle span a {
+        font-size: 1.4em;
+        line-height: 1.5;
     }
     .subTitle p {
-        margin-right: 36%;
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.4em;
     }
     
     /* 00 FOOTER */
     #foot {
         width: 100%;
     }
+    #foot {
+        width: 100%;
+        height: 350px;
+        margin: 50px auto;
+    }
+    #foot:before {
+        content: "";
+        display: block;
+        width: 80%;
+        height: 30px;
+        border-top: 1px solid #8f8f8f;
+        margin: 0px auto;
+    }
+    
+    #bmenu {
+        height: 150px;
+        padding-left: 15%;
+    }
+    #bmenu li {
+        height: 30px;
+        width: 80%;
+        margin-left: 0;
+        float: none;
+        clear: both;
+    }
     #bmenu li:first-child {
-        margin-left: 32%;
+        margin-left: 0;
+        
+    }
+    #bmenu li a {
+        line-height: 30px;
+        font-size: 0.75em;
+        text-align: left;
+        width: fit-content;
+    }
+    #address {
+        padding-left: 15%;
     }
     #address h2 {
-        margin-left: 26%;
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 0;
+        width: 90px;
     }
     #address p {
-        float: left;
-        padding-right: 100px;
+        float: none;
+        clear: both;
+        padding-right: 0;
+        font-size: 0.6em;
+        margin-left: 0;
     }
     #address p+p {
-        float: left;
+        float: none;
+        clear: both;
         padding-right: 0;
+        font-size: 0.75em;
+        margin-left: 0;
+        margin-top: 16px;
+        width: 80%;
+        height: 13px;
+    }
+    #address span {
+        margin-left: 20px;
+    }
+    #address span:first-child {
+        margin-left: 0;
     }
     
     /* TERMS */
@@ -548,13 +631,14 @@
     .contentRule #rules table tr td {
         font-size: 0.8em;
     }
+    .contentRule #rules table.type-short,
     .contentRule #rules table.type-wide {
         width: 90%;
     }
 }
 /* (min-width:640px) and (max-width:1023px) */
 
-@media all and (max-width:639px) {
+@media screen and (max-width:639px) {
     #wrap {
         width: 100%;
         overflow: hidden;
@@ -598,7 +682,6 @@
         clear: both;
         width: 100%;
         text-align: right;
-        padding-left: 10px;
     }
     
     /* 01 TOP CONTENT VEDIO */
@@ -777,13 +860,13 @@
         visibility: hidden;
     }
     #next {
-        top: 45%;
+        top: 40%;
         right: 3vh;
         width: 6vw;
         height: 12vw;
     }
     #prev {
-        top: 45%;
+        top: 40%;
         left: 3vh;
         width: 6vw;
         height: 12vw;
@@ -854,25 +937,30 @@
     
     #bmenu {
         height: 150px;
+        padding-left: 15%;
     }
     #bmenu li {
         height: 30px;
         width: 80%;
-        margin-left: 20%;
+        margin-left: 0;
         float: none;
         clear: both;
     }
     #bmenu li:first-child {
-        margin-left: 20%;
+        margin-left: 0;
         
     }
     #bmenu li a {
         line-height: 30px;
         font-size: 0.75em;
         text-align: left;
+        width: fit-content;
+    }
+    #address {
+        padding-left: 15%;
     }
     #address h2 {
-        margin-left: 20%;
+        margin-left: 0;
         margin-top: 20px;
         margin-bottom: 0;
         width: 90px;
@@ -882,14 +970,14 @@
         clear: both;
         padding-right: 0;
         font-size: 0.6em;
-        margin-left: 20%;
+        margin-left: 0;
     }
     #address p+p {
         float: none;
         clear: both;
         padding-right: 0;
         font-size: 0.75em;
-        margin-left: 20%;
+        margin-left: 0;
         margin-top: 16px;
         width: 80%;
         height: 13px;
@@ -897,7 +985,34 @@
     #address span {
         margin-left: 20px;
     }
+    #address span:first-child {
+        margin-left: 0;
+    }
     
+    /* TERMS */
+    .contentRule {
+        font-size: 0.9em;
+    }
+    .contentRule .contBox {
+        padding: 4%;
+        left: 10vw;
+    }
+    .contentRule .contBox a.closeBtn {
+        right: 0;
+        top: -40px;
+    }
+    .contentRule .contBox a.closeBtn > span {
+        width: 40px;
+    }
+    
+    .contentRule #rules table tr th,
+    .contentRule #rules table tr td {
+        font-size: 0.8em;
+    }
+    .contentRule #rules table.type-short,
+    .contentRule #rules table.type-wide {
+        width: 90%;
+    }
 }
 /* (max-width:639px) */
 

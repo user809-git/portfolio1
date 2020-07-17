@@ -29,13 +29,17 @@
     </div>
     
     <script>
-        var header = $("header #head");
+/*        var header = $("header #head");
         var didScroll; 
         var lastScrollTop = 0; 
         var delta = 5; 
         var navbarHeight = header.outerHeight();
 
-        $(window).scroll(function(event){ didScroll = true; });
+        $(window).scroll(function(event){ 
+            if($(window).width >= 1280){
+                didScroll = true;
+            } else didScroll = false;
+        });
 
         setInterval(function() { 
             if (didScroll) { 
@@ -55,7 +59,7 @@
                     } 
             } 
             lastScrollTop = st; 
-        }
+        }*/
         $(document).ready(function(){
             var searchBtn = $("#toggle_search .goSearch");
             var closeBtn = $("#toggle_search .searchX");

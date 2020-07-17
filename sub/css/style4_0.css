@@ -60,11 +60,6 @@ img, input, select, fieldset, label {
     background-color: transparent;
 }
 
-#wrap {
-    width: 100%;
-    min-width: 1200px;
-    margin: 0 auto;
-}
 
 /* 헤더 header */
 header { height: 85px; }
@@ -193,7 +188,6 @@ header { height: 85px; }
     width: 1200px;
     margin: 0 auto;
     height: 50px;
-    
 }
 #howToShow ul li {
     float: right;
@@ -361,7 +355,7 @@ section.list .list_num {
     width: 5%;
     height: 150px;
     
-    line-height: 50px;
+    line-height: 1;
     float: left;
     font-size: 50px;
     font-family: 'Open Sans', sans-serif;
@@ -587,6 +581,7 @@ section.list:hover > .list_num {
 .contentRule .contBox #rules {
     width: 100%; height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .contentRule .contBox #rules::-webkit-scrollbar {
     width: 8px;
@@ -682,7 +677,711 @@ section.list:hover > .list_num {
 
 
 
+@media screen and (min-width:1280px) {
+    #wrap {
+        width: 100%;
+        min-width: 1200px;
+        margin: 0 auto;
+    }
+}
 
+@media screen and (min-width:1024px) and (max-width:1279px) {
+    
+    body { font-size: 16px; }
+    
+    #wrap {
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        transition: all 0.2s;
+        overflow: hidden;
+    }
+    /* 00 HEADER */
+    #head {
+        max-width: 1000px;
+        width: 90%;
+        height: 85px;
+    }
+    #nav {
+        width: calc(100% - 340px);
+    }
+    .logo {
+        margin-top: 35px;
+        height: 45px;
+    }
+    
+    .menuBtn, .goSearch, .searchX {
+        width: 30px;
+        margin-top: 40px;
+    }
+    .menuBtn {
+        display: block;
+    }
+    #gnb {
+        display: none;
+        width: 130px;
+        position: absolute;
+        right: 0;
+        top: 85px;
+    }
+    #gnb li {
+        margin-left: 0;
+        margin-bottom: 15px;
+        float: none;
+        clear: both;
+        width: 100%;
+        text-align: right;
+    }
+    #gnb li span {
+        font-size: 1.2em;
+    }
+    
+    /* 검색창 -------------- */
+    #toggle_search fieldset#searchBox {
+        height: 35px;
+        width: 300px;
+        margin-top: 35px;
+        border-bottom: 3px solid #111;
+    }
+    #searchBox input[type=search] {
+        line-height: 28px;
+        font-size: 28px;
+        width: 65%;
+    }
+    #searchBox button {
+        width: 30%;
+        font-size: 1.25em;
+    }
+    /* 검색창 끝 -------------- */
+    
+    
+    /* 컨텐츠들 CONTAINER */
+    #container {
+        width: 1000px;
+        margin: 50px auto 0;
+    }
+    #howToShow {
+        width: 1000px;
+        height: 22px;
+        margin: 50px auto 0;
+    }
+    
+    /* LIST */
+    section.list {
+        height: 200px;
+    }
+    section.list{font-size: 0;}
+    section.list .list_num,
+    section.list:hover > .list_num {
+        display: inline-block;
+        width: 6%;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
+    section.list .imgBox,
+    section.list:hover .imgBox {
+        display: inline-block;
+        margin: 0 1%;
+        width: 20%;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
+    section.list .txtBox,
+    section.list:hover .txtBox {
+        display: inline-block;
+        margin-left: 6%;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+    }
+    section.list .txtBox h3 {
+        font-size: 3vw;
+    }
+    section.list > .txtBox span,
+    section.list:hover > .txtBox span {
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+    }
+    
+    /* THUM */
+    section.thum {
+        margin-bottom: 60px;
+    }
+    section.thum{font-size: 0;}
+    section.thum .imgBox,
+    section.thum:hover .imgBox {
+        height: 80%;
+    }
+    section.thum:hover > .imgBox > img,
+    section.thum > .imgBox > img {
+        filter: blur(0px);
+        transform: scale(1, 1);
+    }
+    section.thum .txtBox,
+    section.thum:hover .txtBox {
+        height: 120px;
+    }
+    section.thum .txtBox h3 {
+        font-size: 2vw;
+        padding: 0;
+        margin-bottom: 5px;
+    }
+    section.thum > .txtBox span,
+    section.thum:hover > .txtBox span {
+        font-size: 1.8vw;
+    }
+    
+    
+    
+    /* 00 FOOTER */
+    #foot {
+        width: 100%;
+        margin: 0 auto 60px;
+        height: 140px;
+    }
+    #address p {
+        float: left;
+        padding-right: 100px;
+    }
+    #address p+p {
+        float: left;
+        padding-right: 0;
+    }
+    #address span:first-child {
+        margin-left: 0;
+    }
+    
+    /* TERMS */
+    .contentRule #rules table tr th,
+    .contentRule #rules table tr td {
+        font-size: 0.8em;
+    }
+    .contentRule #rules table.type-short,
+    .contentRule #rules table.type-wide {
+        width: 90%;
+    }
+    .contentRule #rules table.type-wide tr th:first-child,
+    .contentRule #rules table.type-wide tr td:first-child {
+        width: 220px;
+    }
+    .contentRule #rules table.type-wide tr td:last-child {
+        width: 250px;
+    }
+}
+/* (min-width:1024px) and (max-width:1279px) */
+
+@media screen and (min-width:640px) and (max-width:1023px) {
+    
+    #wrap {
+        width: 100%;
+        overflow: hidden;
+    }
+    /* 00 HEADER */
+    #head {
+        max-width: 1000px;
+        width: 90%;
+        height: 85px;
+    }
+    .logo {
+        margin-top: 35px;
+        height: 35px;
+    }
+    
+    .menuBtn, .goSearch, .searchX {
+        width: 30px;
+        margin-top: 40px;
+    }
+    #nav {
+        width: calc(100% - 270px);
+    }
+    .menuBtn {
+        display: block;
+    }
+    
+    #gnb {
+        display: none;
+        width: 130px;
+        position: absolute;
+        right: 0;
+        top: 85px;
+    }
+    #gnb li {
+        margin-left: 0;
+        margin-bottom: 15px;
+        float: none;
+        clear: both;
+        width: 100%;
+        text-align: right;
+    }
+    #gnb li span {
+        font-size: 1.2em;
+    }
+    /* 검색창 -------------- */
+    #toggle_search fieldset#searchBox {
+        height: 35px;
+        width: 220px;
+        margin-top: 35px;
+        border-bottom: 3px solid #111;
+        
+        float: none;
+        clear: both;
+        position: fixed;
+        top: 85px;
+        right: 5%;
+    }
+    #searchBox input[type=search] {
+        line-height: 28px;
+/*        font-size: 28px;*/
+        width: 60%;
+    }
+    #searchBox button {
+        width: 30%;
+    }
+    /* 검색창 끝 -------------- */
+    
+    
+    /* 컨텐츠들 CONTAINER */
+    #container {
+        width: 80vw;
+        margin: 50px auto 0;
+    }
+    #howToShow {
+        width: 80vw;
+        height: 22px;
+        margin: 50px auto 0;
+    }
+    
+    /* LIST */
+    section.list {
+        height: 160px;
+    }
+    section.list .list_num,
+    section.list:hover > .list_num {
+        display: inline-block;
+        width: 6%;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+        font-size: 4vw;
+    }
+    section.list .imgBox,
+    section.list:hover .imgBox {
+        display: inline-block;
+        margin: 0 2%;
+        width: 20%;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
+    section.list .txtBox,
+    section.list:hover .txtBox {
+        display: inline-block;
+        width: 67%;
+        margin-left: 3%;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+    }
+    section.list .txtBox h3 {
+        font-size: 2.8vw;
+        font-weight: 700;
+    }
+    section.list > .txtBox span,
+    section.list:hover > .txtBox span {
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        font-size: 2.6vw;
+        position: relative;
+        bottom: 5px;
+        right: 68%;
+        color: #333;
+    }
+    
+    /* THUM */
+    section.thum {
+        width: 100%;
+        margin: 0 0 60px;
+    }
+    section.thum{font-size: 0;}
+    section.thum .imgBox,
+    section.thum:hover .imgBox {
+        height: 80%;
+    }
+    section.thum:hover > .imgBox > img,
+    section.thum > .imgBox > img {
+        filter: blur(0px);
+        transform: scale(1, 1);
+    }
+    section.thum .txtBox,
+    section.thum:hover .txtBox {
+        height: 120px;
+    }
+    section.thum .txtBox h3 {
+        font-size: 2.8vw;
+        padding: 0;
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
+    section.thum > .txtBox span,
+    section.thum:hover > .txtBox span {
+        font-size: 2.6vw;
+    }
+    
+    
+    
+    /* 00 FOOTER */
+    #foot {
+        width: 100%;
+    }
+    #foot {
+        width: 100%;
+        height: 350px;
+        margin: 50px auto;
+    }
+    #foot:before {
+        content: "";
+        display: block;
+        width: 80%;
+        height: 30px;
+        border-top: 1px solid #8f8f8f;
+        margin: 0px auto;
+    }
+    
+    #bmenu {
+        height: 150px;
+        padding-left: 15%;
+    }
+    #bmenu li {
+        height: 30px;
+        width: 80%;
+        margin-left: 0;
+        float: none;
+        clear: both;
+    }
+    #bmenu li:first-child {
+        margin-left: 0;
+        
+    }
+    #bmenu li a {
+        line-height: 30px;
+        font-size: 0.75em;
+        text-align: left;
+        width: fit-content;
+    }
+    #address {
+        padding-left: 15%;
+    }
+    #address h2 {
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 0;
+        width: 90px;
+    }
+    #address p {
+        float: none;
+        clear: both;
+        padding-right: 0;
+        font-size: 0.6em;
+        margin-left: 0;
+    }
+    #address p+p {
+        float: none;
+        clear: both;
+        padding-right: 0;
+        font-size: 0.75em;
+        margin-left: 0;
+        margin-top: 16px;
+        width: 80%;
+        height: 13px;
+    }
+    #address span {
+        margin-left: 20px;
+    }
+    #address span:first-child {
+        margin-left: 0;
+    }
+    #address img#bLogo {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    /* TERMS */
+    .contentRule {
+        font-size: 0.9em;
+    }
+    .contentRule .contBox {
+        padding: 4%;
+        left: 10vw;
+    }
+    .contentRule .contBox a.closeBtn {
+        right: 0;
+        top: -40px;
+    }
+    .contentRule .contBox a.closeBtn > span {
+        width: 40px;
+    }
+    
+    .contentRule #rules table tr th,
+    .contentRule #rules table tr td {
+        font-size: 0.8em;
+    }
+    .contentRule #rules table.type-short,
+    .contentRule #rules table.type-wide {
+        width: 90%;
+    }
+}
+/* (min-width:640px) and (max-width:1023px) */
+
+@media screen and (max-width:639px) {
+    
+    #wrap {
+        width: 100%;
+        overflow: hidden;
+    }
+    /* 00 HEADER */
+    #head {
+        width: 90%;
+        height: 75px;
+    }
+    .menuBtn, .goSearch, .searchX {
+        width: 25px;
+        margin-top: 30px;
+    }
+    #nav {
+        width: calc(100% - 230px);
+    }
+    .menuBtn {
+        display: block;
+    }
+    #toggle_search fieldset#searchBox {
+        width: 200px;
+    }
+    #searchBox input[type=search]{
+        width: 65%;
+    }
+    #searchBox button {
+        font-size: 0.85em;
+        width: 30%;
+        letter-spacing: 1px;
+    }
+    #gnb {
+        display: none;
+        width: 108px;
+        position: absolute;
+        right: 0;
+        top: 80px;
+    }
+    #gnb li {
+        margin-left: 0;
+        margin-bottom: 10px;
+        float: none;
+        clear: both;
+        width: 100%;
+        text-align: right;
+    }
+    
+    
+    /* 컨텐츠들 CONTAINER */
+    #container {
+        width: 80vw;
+        height: auto;
+        margin: 0 auto;
+    }
+    #howToShow {
+        display: none;
+    }
+    
+    /* LIST, THUM */
+    section.list,
+    section.thum {
+        display: block;
+        width: 100%;
+        height: 300px;
+        position: relative;
+        margin: 25vw auto 0;
+    }
+    section.list:first-child {
+        margin-top: 100px;
+    }
+    section.list .list_num,
+    section.list:hover > .list_num,
+    section.thum .list_num {
+        display: block;
+        width: 6%;
+        height: 1em;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+        
+        position: absolute;
+        top: -1em;
+        font-size: 6vw;
+        text-shadow: 0px 1px 2px #eee;
+    }
+    section.list .imgBox,
+    section.list:hover .imgBox,
+    section.thum .imgBox,
+    section.thum:hover .imgBox {
+        display: block;
+        margin: 0;
+        width: 100%;
+        height: 220px;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
+    section.list .txtBox,
+    section.list:hover .txtBox,
+    section.thum .txtBox,
+    section.thum:hover .txtBox {
+        display: block;
+        color: #111;
+        width: 100%;
+        height: 80px;
+        margin-left: 0;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        clear: both;
+        
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    section.list .txtBox h3,
+    section.thum .txtBox h3 {
+        font-size: 3.5vw;
+        font-weight: 700;
+        text-align: center;
+        padding: 0;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+    section.list > .txtBox span,
+    section.list:hover > .txtBox span,
+    section.thum > .txtBox span,
+    section.thum:hover > .txtBox span {
+        display: block;
+        width: 100%;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        position: absolute;
+        bottom: 10px;
+        
+        font-size: 3vw;
+        font-weight: 700;
+        text-align: center;
+        color: #333;
+        right: 0;
+    }
+    
+    /* THUM */
+    section.thum:hover > .imgBox > img,
+    section.thum > .imgBox > img {
+        filter: blur(0px);
+        transform: scale(1, 1);
+    }
+    
+    
+    
+    /* 00 FOOTER */
+    #foot {
+        width: 100%;
+        height: 350px;
+        margin: 50px auto;
+    }
+    #foot:before {
+        content: "";
+        display: block;
+        width: 80%;
+        height: 30px;
+        border-top: 1px solid #8f8f8f;
+        margin: 0px auto;
+    }
+    
+    #bmenu {
+        height: 150px;
+        padding-left: 15%;
+    }
+    #bmenu li {
+        height: 30px;
+        width: 80%;
+        margin-left: 0;
+        float: none;
+        clear: both;
+    }
+    #bmenu li:first-child {
+        margin-left: 0;
+        
+    }
+    #bmenu li a {
+        line-height: 30px;
+        font-size: 0.75em;
+        text-align: left;
+        width: fit-content;
+    }
+    #address {
+        padding-left: 15%;
+    }
+    #address h2 {
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 0;
+        width: 90px;
+    }
+    #address p {
+        float: none;
+        clear: both;
+        padding-right: 0;
+        font-size: 0.6em;
+        margin-left: 0;
+    }
+    #address p+p {
+        float: none;
+        clear: both;
+        padding-right: 0;
+        font-size: 0.75em;
+        margin-left: 0;
+        margin-top: 16px;
+        width: 80%;
+        height: 13px;
+    }
+    #address span {
+        margin-left: 20px;
+    }
+    #address span:first-child {
+        margin-left: 0;
+    }
+    #address img#bLogo {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    /* TERMS */
+    .contentRule {
+        font-size: 0.9em;
+    }
+    .contentRule .contBox {
+        padding: 4%;
+        left: 10vw;
+    }
+    .contentRule .contBox a.closeBtn {
+        right: 0;
+        top: -40px;
+    }
+    .contentRule .contBox a.closeBtn > span {
+        width: 40px;
+    }
+    
+    .contentRule #rules table tr th,
+    .contentRule #rules table tr td {
+        font-size: 0.8em;
+    }
+    .contentRule #rules table.type-short,
+    .contentRule #rules table.type-wide {
+        width: 90%;
+    }
+}
+/* (max-width:639px) */
 
 
 
