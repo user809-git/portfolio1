@@ -41,13 +41,18 @@ $(document).ready(function(){
     var nowScroll = $(window).scrollTop();
     var delayPosition = 100;
     
-    section.eq(0).addClass('up');
+    $(document).ready(function(){
+        floatUp();
+    });
+    $(window).on("scroll", function(){
+        floatUp();
+    });
     
     $(window).on("resize", function(){
         insertSectionFloat();
     });
     
-    $(window).on("scroll", function(){
+    function floatUp() {
         var position = $(window).scrollTop() + windowheight;
         var readySection = $("section.ready");
         
@@ -57,7 +62,7 @@ $(document).ready(function(){
                 $(this).removeClass('ready');
             }
         });
-    });
+    }
     
     function insertSectionFloat() {
         windowheight = $(window).height();
