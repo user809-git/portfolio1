@@ -237,7 +237,7 @@
     }
     #address p {
         float: left;
-        padding-right: 100px;
+        padding-right: 15vw;
     }
     #address p+p {
         float: left;
