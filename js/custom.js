@@ -7,9 +7,6 @@ $(document).ready(function(){
         var ht = $(window).height();
         topBox.height(ht);
         
-        if($("#head").innerWidth() == 1200) {
-            $("#gnb").slideDown();
-        }
     });
     
     // 1 gnb ---------------------------------------------//
@@ -69,7 +66,7 @@ $(document).ready(function(){
     var next = $("#next");
     var prev = $("#prev");
 
-    var newsWidth = news.outerWidth();
+    var newsWidth = news.innerWidth();
     var slideLength = news.length;
     
     var current = 0;
