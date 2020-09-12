@@ -54,7 +54,7 @@ DESUGN SAMSUNG 디자인 삼성
 - 📄 index.html
 
 ***
-# 👀 Code Self-review
+# 👀 Self Code-review
 ## 효과들
 
 ### *.css + *.js
