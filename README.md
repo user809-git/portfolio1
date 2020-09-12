@@ -12,7 +12,7 @@ DESUGN SAMSUNG 디자인 삼성
 
 ### 참고 페이지
 - [Design Samsung](http://design.samsung.com/kr/)
-- [Samchully Asst Management](sig-fund.com)
+- [Samchully Asset Management](http://www.sig-fund.com/)
 
 ***
 
