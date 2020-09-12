@@ -1,5 +1,3 @@
-> *no framework, no Library*
-
 DESUGN SAMSUNG 디자인 삼성
 =========
 
