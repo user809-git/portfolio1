@@ -1,6 +1,6 @@
 > *no framework, no Library*
 
-DESUGN SAMSUNG 디자인 삼성
+DESIGN SAMSUNG 디자인 삼성
 =========
 
 # 📌 About this Portfolio
